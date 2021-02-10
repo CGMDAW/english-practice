@@ -1,0 +1,33 @@
+
+[
+    {
+        "part1": "If I" , "solution1": "go", "part2": "(go) out tonight , I" ,"solution2": "will go","part3": "(go) to the cinema."
+    },
+    {
+        "part1": "If you ", "solution1": "get", "part2": "(get) back late, I" ,"solution2": "will be","part3": "(be) angry."
+    },
+    {
+        "part1": "If we" , "solution1": "don't see", "part2": "(not/see) eachother tomorrow,we" ,"solution2": "will see","part3": "(see) each other next week."
+    },
+    {
+        "part1": "If he" , "solution1": "comes", "part2": "(come), I " ,"solution2": "will be","part3": "(be) surprised."
+    },
+    {
+        "part1": "If we" , "solution1": "wait", "part2": "(wait) here, we" ,"solution2": "will be","part3": "(be) late."
+    },
+    {
+        "part1": "If we" , "solution1": "go", "part2": "(go) on holiday this summer, we" ,"solution2": "will go","part3": "(go) to Spain."
+    },
+    {
+        "part1": "If the weather" , "solution1": "doesn't improve", "part2": "(not/improve), we" ,"solution2": "won't have","part3": "(not/have) a picnic."
+    },
+    {
+        "part1": "If I " , "solution1": "don't go", "part2": "(not/go) to bed early, I " ,"solution2": "will be","part3": "(be) tired tomorrow."
+    },
+    {
+        "part1": "If we" , "solution1": "eat", "part2": "(eat) all this cake, we" ,"solution2": "will feel","part3": "(feel) sick."
+    },
+    {
+        "part1": "If you" , "solution1": "don't want", "part2": "(not/want) to go out, I" ,"solution2": "will cook","part3": "(cook) dinner at home."
+    }
+]

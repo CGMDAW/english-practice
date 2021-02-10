@@ -1,28 +1,63 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid pt-5">
+
+    <practice-component 
+        v-for="(item,index) in coleccion" 
+        :key="index" 
+        :part1="item.part1" 
+        :solution1="item.solution1" 
+        :part2="item.part2" 
+        :solution2="item.solution2"
+        :part3="item.part3"
+        :index="index + 1 "
+     ></practice-component>
+    
+    <button-comprove></button-comprove>
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
+import PracticeComponent from './components/PracticeComponent.vue'
+import ButtonComprove from './components/ButtonComprove.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      coleccion: []
+    }
+  },
+  created(){
+    this.obtenerDatos()
+  },
+  methods:{
+    obtenerDatos: function(){
+
+      var url = `https://english-practice-362b6-default-rtdb.firebaseio.com/Conditionals1.json`;
+
+       axios
+          .get(url)
+          .then(response => {
+              
+            this.coleccion = response.data
+
+            })
+            .catch(error => {
+              console.log(error)
+            })
+    }
+  },
+
   components: {
-    HelloWorld
+    PracticeComponent,
+    ButtonComprove
   }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
