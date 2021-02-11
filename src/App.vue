@@ -2,6 +2,7 @@
   <div id="app" class="container-fluid pt-5">
 
     <practice-component 
+        :corregir="corregir"
         v-for="(item,index) in coleccion" 
         :key="index" 
         :part1="item.part1" 
@@ -12,7 +13,7 @@
         :index="index + 1 "
      ></practice-component>
     
-    <button-comprove></button-comprove>
+    <button-comprove @comprobarRespuesta="activaCorregir"></button-comprove>
 
 
   </div>
@@ -27,6 +28,7 @@ export default {
   name: 'App',
   data(){
     return {
+      corregir: false,
       coleccion: []
     }
   },
@@ -34,6 +36,9 @@ export default {
     this.obtenerDatos()
   },
   methods:{
+      activaCorregir: function() {
+          this.corregir = true;
+      },
     obtenerDatos: function(){
 
       var url = `https://english-practice-362b6-default-rtdb.firebaseio.com/Conditionals1.json`;

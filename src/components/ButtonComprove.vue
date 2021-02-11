@@ -7,12 +7,11 @@
 </template>
 
 <script>
-import { EventBus } from '../main.js'
 
 export default {
     methods:{
         comprobar(){
-            EventBus.$emit('comprobarRespuesta')
+            this.$emit('comprobarRespuesta')
         }
     }
 }
