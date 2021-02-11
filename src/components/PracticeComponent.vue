@@ -31,7 +31,6 @@
 
 <script>
 //import ButtonComprove from './ButtonComprove.vue'
-import { EventBus } from '../main.js'
 
 export default {
     components:{
@@ -46,6 +45,7 @@ export default {
         }
     },
     props:{
+        corregir: false,
         part1: String,
         part2: String,
         part3: String,
@@ -53,13 +53,15 @@ export default {
         solution2: String,
         index: Number
     },
-     mounted() {
-        this.loadListenEvent()
+    watch: {
+        corregir: function(newVal, oldVal) {
+            if (newVal) {
+                // corregir = true
+                this.comprobar();
+            }
+        }
     },
     methods:{
-        loadListenEvent() {
-            EventBus.$on('comprobarRespuesta', this.comprobar)
-        },
         comprobar(){
             if(this.value1 != this.solution1){
                 this.acierto1 = false;
